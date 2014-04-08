@@ -58,7 +58,7 @@ sed -e "s;%NAME%;$NAME;" -e "s;%DEVELOPER_ID%;$DEVELOPER_ID;" -e "s;%AIR_VERSION
 	$SCRIPT_PATH/Template/Descriptor.xml > $SRC_DIR/$NAME$DESCRIPTOR_SUFFIX.xml
 
 #generate a custom build script for this project (this is a bit nasty)
-sed -e "s;%NAME%;$NAME;" -e "s;%WORKSPACE%;$WORKSPACE;" -e "s;%SDK%;$SDK;" \
+sed -e "s;%NAME%;$NAME;" -e "s;%WORKSPACE%;$WORKSPACE;" -e "s;%SDK%;$SDK;" -e "s;%VERSION%;$VERSION;" \
 	-e "s;%FRAMEWORKS%;$FRAMEWORKS;" -e "s;%SRC%;$SRC;" -e "s;%DEPLOY_DEBUG%;$DEPLOY_DEBUG;" \
 	-e "s;%DESCRIPTOR_SUFFIX%;$DESCRIPTOR_SUFFIX;" -e "s;%COMPILER%;$COMPILER;" \
 	-e "s;%CONFIG%;$CONFIG;" -e "s;%ADL%;$ADL;" -e "s;%LOCALE%;$LOCALE;" \

@@ -4,6 +4,7 @@
 NAME="%NAME%"
 WORKSPACE="%WORKSPACE%"
 SDK="%SDK%"
+VERSION="%VERSION%"
 FRAMEWORKS="$SDK/%FRAMEWORKS%"
 CONFIG="$FRAMEWORKS/%CONFIG%"
 SRC="$WORKSPACE/$NAME/%SRC%"
@@ -27,6 +28,7 @@ mkdir $DEPLOY_DEBUG
 #compile a new SWF and duplicate the app descriptor XML
 echo "\nCompiling $NAME.swf using $COMPILER...\n"
 $COMPILER	-load-config $CONFIG \
+			-swf-version=$VERSION \
 			-source-path $FRAMEWORKS \
 			-source-path $SOURCE_PATH \
 			-include-libraries+=$FRAMEWORKS/libs \
